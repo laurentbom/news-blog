@@ -1,0 +1,16 @@
+.btn{
+  display: inline-block;
+  font-size: 14px;
+  font-family: $font1;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 20px 44px;
+  background-color: $rouge;
+  transition: .3s all ease-in-out;
+  border: 1px solid $rouge;
+  &:hover{
+    background-color: darken($color: $rouge, $amount: 20%);
+    border: 1px solid darken($color: $rouge, $amount: 20%);
+  }
+}

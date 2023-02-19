@@ -1,0 +1,61 @@
+//--------------------------------------------------
+//---------------Partie principale------------------
+//--------------------------------------------------
+// Partie de droite dans le global (similaire à latest news)
+.catMain .colBig{
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 20px 20px 20px;
+  margin: 50px 15px;
+  &__top ul{
+    display: flex;
+    padding: 40px 0px 50px;
+    li{
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    li:not(last-child){
+      margin-right: 15px;
+    }
+  }
+}
+.colBig__article{
+  a{
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    padding: 10px 0;
+    display: inline-block;
+    &__hover{
+      color: #ED4141;
+    }
+  }
+  .pic_credits{
+    margin-bottom: 10px;
+  }
+  p:last-child{
+    margin-bottom: 40px;
+    line-height: 30px;
+  }
+  &__img{
+    border-radius: 10px;
+    overflow: hidden;
+    img{
+      transition: .3s all ease-in-out;
+    }
+    &:hover{
+      img{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.colBig__articles{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  @media screen and (max-width:765px){
+    grid-template-columns: 1fr;
+  }
+}

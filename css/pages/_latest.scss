@@ -1,0 +1,49 @@
+//--------------------------------------------------
+//---------------Partie Principale------------------
+//--------------------------------------------------
+// Partie secondaire de droite dans le global car similaire à la page category
+.colBig{
+  margin: 50px auto;
+  padding-left: 25px;
+  // Image
+  &__img{
+    height: 410px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  // Texte
+  &__txt{
+    h4{
+      font-family: $font2;
+      font-size: 40px;
+      font-weight: 700;
+      color: $fontcol;
+      margin-bottom: 30px;
+    }
+    p{
+      font-size: 15px;
+      line-height: 30px;
+      color: #506172;
+      margin-bottom: 30px;
+    }
+  }
+  // Share
+  &__share{
+    display: flex;
+    column-gap: 20px;
+    align-items: flex-end;
+    span{
+      font-family: $font2;
+      font-size: 40px;
+      font-weight: 700;
+      color: $fontcol;
+    }
+    img{
+      height: 29px;
+      width: 29px;
+    }
+  }
+}
+
+

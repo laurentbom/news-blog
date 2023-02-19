@@ -1,0 +1,184 @@
+//--------------------------------------------------
+//---------------Section Missions-------------------
+//--------------------------------------------------
+.main__mission{
+  padding: 100px;
+  @media screen and (max-width:990px){
+    padding:100px 20px;
+  }
+  &__p1{
+    margin-bottom: 100px;
+  }
+  &__title{
+    color: $fontcol;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__txt{
+    width: 80%;
+    font-size: 14px;
+    line-height: 30px;
+    color: $fontcol;
+    p{
+      margin: 50px 0px 0px;
+      text-align: justify;
+    }
+    @media screen and (max-width:990px){
+      width: 100%;
+    }
+  }
+}
+//--------------------------------------------------
+//---------------Section Services-------------------
+//--------------------------------------------------
+.services__wrapper{
+  background-image: url(https://www.cepegra-labs.be/webdesign/fed2022/oli/eval/assets/img/gallery/section_bg02.jpg);
+  padding: 100px 0;
+}
+.services{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 100px;
+  
+  &__txt{
+    width: 30%;
+    &__title1{
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      p{
+        font-family: $font2;
+        color: $rouge;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    &__title2{
+      p{
+        font-family: $font2;
+        display: block;
+        color: white;
+        font-size: 50px;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+    }
+    &__content{
+      color: white;
+      font-family: $font2;
+      p{
+        line-height: 30px;
+      }
+      & p:nth-of-type(1){
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+      & p:nth-of-type(2){
+        font-size: 15px;
+        margin-bottom: 80px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+// Responsive Services
+@media screen and (max-width:990px){
+  .services{
+    flex-direction: column;
+    &__img{
+      width: 420px;
+    }
+    &__txt{
+      width: 420px;
+      & .btn{
+        background-color: black;
+        color: $rouge;
+        &:hover{
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+//--------------------------------------------------
+//---------------Section Team Mambers---------------
+//--------------------------------------------------
+.team__container{
+  padding: 100px 0;
+}
+.team__title{
+  &__red{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $rouge;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+  &__big{
+    margin-bottom: 60px;
+    font-family: $font2;
+    color: $fontcol;
+    font-size: 50px;
+    font-weight: 800;
+  }
+}
+// Alignement images
+.team{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  &__content__ppl{
+    background-color: #fff;
+    // Scale hover sur image
+    &__img{
+      overflow: hidden;
+      img{
+        transition: .3s all ease-in-out;
+      }
+      img:hover{
+        scale: 1.1;
+      }
+    }
+  }
+}
+.team__content__txt{
+  padding: 20px 20px 20px 50px;
+  font-family: $font2;
+  p{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  &__red{
+    display: flex;
+    align-items: center;
+    span:last-child{
+      color: $rouge;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}
+// Responsive Team Members
+@media screen and (max-width:990px){
+  .team{
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
+}
+@media screen and (max-width:765px){
+  .team{
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+}

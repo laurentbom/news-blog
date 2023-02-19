@@ -1,0 +1,406 @@
+// Mobile First, grand regret pour une page grosse comme ca j'ai pleuré ! 
+// Code pas super propre du coup
+// Les autres pages sont en desktop first
+//--------------------------------------------------
+//---------------Section Principale-----------------
+//--------------------------------------------------
+.main__first__col1__big, .main__first__col2__small{
+  margin-top: 30px;
+  position: relative;
+  img{
+    border-radius: 10px;
+  }
+  &__txt{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    z-index: 1;
+    span{
+      margin-bottom: 20px;
+    }
+    a{
+      color: inherit;
+      font-family: $font2;
+      font-weight: 800;
+      font-size: 15px;
+      
+    }
+    p{
+      margin: 15px 0;
+    }
+  }
+}
+.main__first__col1__big{
+  a{
+    @media screen and (min-width:791px){
+      font-size: 40px;
+    }
+  }
+}
+.main__first__col1__big span{
+  background-color: #ED4141;
+}
+.main__first__col2__small:nth-of-type(1) span{
+  background-color: #0077b5;
+}
+.main__first__col2__small:nth-of-type(2) span{
+  background-color: #13C600;
+}
+.main__first__col2{
+  padding-bottom: 30px;
+}
+.main__line{
+  height: 1px;
+  width: 100%;
+  background-color: #eee;
+}
+//--------------------------------------------------
+//---------------Section What's New-----------------
+//--------------------------------------------------
+.main__new{
+  border-radius: 10px;
+  margin-top: 50px;
+  // Nav
+  &__col1__big__top ul{
+    display: flex;
+    padding: 40px 0px 50px;
+    li{
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    li:not(last-child){
+      margin-right: 15px;
+    }
+  }
+}
+.main__new__col1__big{
+  background-color: #fff;
+  padding: 30px 20px 20px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.main__new__col1__big__top{
+  @media screen and (min-width:1199px){
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    & ul{
+      padding: 30px;
+    }
+  }
+}
+  // Content
+  // Article Principal
+.main__new__col1__big__content{
+  @media screen and (min-width:1199px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+  .content__big{
+    a{
+      font-size: 24px;
+      font-weight: 700;
+      color: black;
+      padding: 10px 0;
+      display: inline-block;
+      &__hover{
+        color: #ED4141;
+      }
+    }
+    .pic_credits{
+      margin-bottom: 10px;
+    }
+    p:last-child{
+      margin: 40px 0;
+      line-height: 30px;
+    }
+    &__img{
+      border-radius: 10px;
+    }
+  }
+}
+
+// Articles secondaires
+.content__sec__article{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  img{
+    width: 124px;
+    height: 104px;
+    border-radius: 10px;
+  }
+  &__content{
+    span{
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    p:last-child{
+      margin-top: 20px;
+    }
+  }
+}
+.content_sec_subject1{
+  color: #0077b5;
+}
+.content_sec_subject2{
+  color: #0077b5;
+}
+.content_sec_subject3{
+  color: #13C600;
+}
+.content_sec_subject4{
+  color: $rouge;
+}
+// Colonne secondaire
+// Réseaux sociaux
+.main__new__col2__socials{
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 30px 0 40px;
+  padding: 30px 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  img{
+    height: 29px;
+    width: 29px;
+  }
+  &__grid{
+    border-radius: 10px;
+    border: 1px solid $gris;
+    padding: 10px;
+    display: flex;
+    column-gap: 15px;
+    &__txt{
+      p:nth-of-type(1){
+        font-size: 14px;
+        font-weight: 500;
+      }
+      p:nth-of-type(2){
+        font-size: 11px;
+      }
+    }
+  }
+}
+//--------------------------------------------------
+//---------------Section Most recent----------------
+//--------------------------------------------------
+.main__new__col2__recent{
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 10px;
+  margin-bottom: 70px;
+  h4{
+    margin-bottom: 20px;
+  }
+}
+// Article principal
+.main__new__col2__recent__big{
+  position: relative;
+  margin-bottom: 40px;
+  & > div:nth-of-type(1){
+    border-radius: 10px;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(2,26,71,0) 0%, rgba(2,26,71,0.6) 100%);
+    }
+  }
+  & > div:nth-of-type(2){
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    span{
+      background-color: #8a3ab9;
+    }
+    a{
+      font-family: $font2;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin: 20px 0;
+    }
+    .pic_credits{
+      color: white;
+    }
+  }
+}
+// Articles secondaires
+.main__new__col2__recent__small{
+  margin-bottom: 15px;
+  &__img{
+    width: 85px;
+    height: 79px;
+  }
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  a{
+    font-family: $font2;
+    font-weight: 500;
+    color: black;
+  }
+}
+
+//--------------------------------------------------
+//---------------Section Most popular---------------
+//--------------------------------------------------
+.main__pop{
+  margin-bottom: 30px;
+  &__pub{
+    display: none;
+  }
+  &__articles{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 20px 20px 20px;
+    h4{
+      margin-bottom: 30px;
+    }
+    &__content{
+      padding: 0px 5px;
+      &__article{
+        & > div img{
+          border-radius: 10px;
+        }
+        a{
+          font-family: $font2;
+          font-size: 16px;
+          font-weight: 700;
+          color: black;
+          margin: 20px 0;
+          display: inline-block;
+        }
+      }
+      &__article:nth-of-type(2){
+        display: none;
+      }
+      &__article:nth-of-type(3){
+        display: none;
+      }
+    }
+  }
+}
+//--------------------------------------------------
+//---------------Section Trending-------------------
+//--------------------------------------------------
+.main__trending{
+  h3{
+    margin-bottom: 30px;
+  }
+  background-color: #fff;
+  padding: 80px 0px;
+  margin-bottom: 30px;
+  &__article{
+    position: relative;
+    margin: 0 auto;
+    &__txt{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      border-radius: 0px 10px 0px 0px;
+      width: 80%;
+      padding: 20px 20px 10px 10px;
+      a{
+        font-family: $font2;
+        font-size: 18px;
+        font-weight: 700;
+        color: black;
+      }
+      & > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        i{
+          color: #7A8496;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  &__article:nth-of-type(2){
+    display: none;
+  }
+  &__article:nth-of-type(3){
+    display: none;
+  }
+}
+.main__pub__fin{
+  margin-bottom: 30px;
+}
+
+//--------------------------------------------------
+//---------------Responsive-------------------------
+//--------------------------------------------------
+@media screen and (min-width:801px){
+  // Partie principale et whats new
+  .main__first, .main__new{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 30px;
+  }
+  .main__new__col1__pub{
+    margin-bottom: 30px;
+  }
+  
+}
+// Parties most popular et trending
+@media screen and (min-width:700px){
+  .main__pop, {
+    display: flex;
+    column-gap: 30px;
+    &__pub{
+      display: block;
+      width: 300px;
+    }
+  }
+  .main__pop__articles__content{
+    display: flex;
+    column-gap: 30px;
+  }
+  .main__trending > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
+  .main__pop__articles__content__article:nth-of-type(2),.main__trending__article:nth-of-type(2){
+    display: block;
+  }
+  .main__trending__article{
+    margin: 0;
+  }
+}
+@media screen and (min-width:991px){
+  .main__pop__articles__content__article:nth-of-type(3),.main__trending__article:nth-of-type(3){
+    display: block;
+  }
+
+}
+@media screen and (min-width:700px){
+  .main__new__col2__socials{
+    margin-top: 0;
+  }
+}
+
